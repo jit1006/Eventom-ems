@@ -32,9 +32,11 @@ Introducing our Event Management System,designed to streamline campus event plan
 1. Clone the repository to your local machine.
 2. Navigate to the project directory. use two terminal <br>
    **Cd Client** - For Frontend
+   <br>
    **npm install** For Installing frontend dependencies.
    <br>
    **Cd api** - For Backend
+   <br>
    **npm install** For Installing frontend dependencies.
    <br>
 3. Installed server dependenciesfor both frontend and backend.
