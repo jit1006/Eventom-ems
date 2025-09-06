@@ -12,7 +12,9 @@ import { BiLike } from "react-icons/bi";
     useEffect(() => {
       
       axios
-        .get("https://eventom-ems.onrender.com/createEvent")
+        // .get("/createEvent")
+        .get(`${import.meta.env.VITE_API_URL}/createEvent`)
+
         .then((response) => {
           setEvents(response.data);
         })
@@ -24,7 +26,8 @@ import { BiLike } from "react-icons/bi";
   //! Like Functionality --------------------------------------------------------------
     const handleLike = (eventId) => {
       axios
-        .post(`/event/${eventId}`)
+        // .post(`/event/${eventId}`)
+        .post(`${import.meta.env.VITE_API_URL}/event/${eventId}`)
         .then((response) => {
             setEvents((prevEvents) =>
             prevEvents.map((event) =>
@@ -64,7 +67,9 @@ import { BiLike } from "react-icons/bi";
               <div className='rounded-tl-[0.75rem] rounded-tr-[0.75rem] rounded-br-[0] rounded-bl-[0] object-fill aspect-16:9'>
               {event.image && (
                 <img
-                  src={`http://localhost:4000/api/${event.image}`}
+                //  for local // src={`http://localhost:4000/api/${event.image}`}
+                  src={`${import.meta.env.VITE_API_URL}/api/${event.image}`}
+
                   alt={event.title}
                   width="300" 
                   height="200" 
