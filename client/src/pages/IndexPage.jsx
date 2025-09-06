@@ -12,7 +12,7 @@ import { BiLike } from "react-icons/bi";
     useEffect(() => {
       
       axios
-        .get("/createEvent")
+        .get("https://eventom-ems.onrender.com/createEvent")
         .then((response) => {
           setEvents(response.data);
         })
