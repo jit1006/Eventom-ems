@@ -22,7 +22,7 @@ app.use(
    cors({
       credentials: true,
       // origin: "http://localhost:5173",
-         origin: "http://https://jocular-gecko-e029e6.netlify.app",
+         origin: "http://jocular-gecko-e029e6.netlify.app",
    })
 );
 
